@@ -2350,7 +2350,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2000;
+  z-index: 9;
   height: 6rem;
 }
 
@@ -2806,11 +2806,11 @@ h6 {
 }
 
 .navList__wrap a:hover {
-  color: var(--accent-color);
+  color: var(--primary-light-color);
 }
 
 .navList__wrap a:not([href]):not([tabindex]):hover {
-  color: var(--accent-color);
+  color: var(--primary-light-color);
 }
 
 .navList {
@@ -2879,7 +2879,7 @@ h6 {
 }
 
 .navList .menu-item-has-children > a:hover::after {
-  color: var(--accent-color);
+  color: var(--primary-light-color);
   transform: translateX(10px);
 }
 

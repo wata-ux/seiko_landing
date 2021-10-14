@@ -359,7 +359,7 @@
             <!-- section start -->
             <section class="masthead -type-2 js-masthead js-masthead-type-2">
                 <!-- shapes start -->
-                <div class="masthead-shapes -group-3">
+                <div class="masthead-shapes -group-3" style="display: none;">
                     <div class="masthead-shapes__item -item-1">
                         <div class="masthead-shapes__shape -white -shadow-light js-shape"></div>
                     </div>
@@ -371,6 +371,12 @@
                     </div>
                 </div>
                 <!-- shapes end -->
+
+                <div class="video-bg">
+                    <div class="video-inner">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZBxKWvyvD-4?start=4&autoplay=1&controls=0&loop=1&playlist=ZBxKWvyvD-4&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
 
                 <!-- content start -->
                 <div class="container-fluid px-24">
@@ -884,9 +890,11 @@
                         <div class="col-lg-4 col-sm-6">
                             <div data-anim="slide-up" class="teamCard">
                                 <div class="teamCard__img">
-                                    <div>
-                                        <div class="bg-image ratio ratio-2:3 js-lazy" data-bg="images/team/1.jpg"></div>
-                                    </div>
+                                    <a href="#ex7">
+                                        <div>
+                                            <div class="bg-image ratio ratio-2:3 js-lazy" data-bg="images/team/1.jpg"></div>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div class="teamCard__content text-center mt-24">
@@ -1214,6 +1222,15 @@
     </div>
     <!-- barba container end -->
 
+    <div id="ex7" class="modal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" rel="modal:close">Close</a>
+      </div>
 
     <!-- JavaScript -->
     <script src="js/vendors.js"></script>
@@ -1227,7 +1244,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-
+    <script>
+        $('a[href="#ex7"]').click(function(event) {
+          event.preventDefault();
+          $(this).modal({
+            fadeDuration: 250,
+            clickClose: false
+          });
+        });
+    </script>
+    
 </body>
 
 </html>
